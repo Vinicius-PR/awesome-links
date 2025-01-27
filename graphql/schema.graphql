@@ -2,6 +2,32 @@
 ### Do not make changes to this file directly
 
 
+type Link {
+  category: String
+  description: String
+  id: Int
+  imageUrl: String
+  title: String
+  url: String
+  users: [User]
+}
+
 type Query {
-  ok: Boolean!
+  links: [Link]!
+}
+
+enum Role {
+  ADMIN
+  USER
+}
+
+type User {
+  bookmarks: [Link]
+  email: String
+  id: String
+  image: String
+  name: String
+
+  """The role of the user. Can be user or admin"""
+  role: Role
 }
