@@ -20,3 +20,4 @@ export const schema = makeSchema({
     module: join(process.cwd(), 'graphql', 'context.ts')
   }
 })
+
